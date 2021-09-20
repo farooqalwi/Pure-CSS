@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "child_process": "^1.0.2",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.3.6",
+    "postcss-font-magician": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "rfs": "^9.0.6"
+  }
+}
