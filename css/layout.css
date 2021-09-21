@@ -1,0 +1,134 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+body{
+    display: flex;
+    flex-direction: column;
+
+    & .article, & .categories, & .tags, & .archives {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto minmax(0,1fr);
+        margin: 0 20px 0 110px;
+      
+      
+        & header {
+        grid-column: 3/12;
+        grid-row: 1;
+        padding: 0;
+      }
+      
+      & .article-toc {
+        grid-column: 1/3;
+        grid-row: 2;
+        margin-right: 30px;
+      
+        & .article-toc-lists{
+          padding: 0;
+        }
+      }
+      
+      & .article-content, & .categories-list, & .tags-list, & .archives-list {
+        grid-column: 3/10;
+        grid-row: 2;
+        text-align: justify;  
+      }
+      
+      
+      & .article-content .article-content-share {
+        text-align: end;
+      }
+      
+      & .article-content .content-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      & .article-sidebar {
+        grid-column: 10/12;
+        grid-row: 2;
+        margin-left: 30px;
+      }
+      
+      
+      
+      /* for Desktop css rules end here*/
+      
+      & .article-sidebar a svg {
+        width: 20px;
+        height: 20px;
+      }
+      }
+      
+      & footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgb(194, 193, 193);
+      }
+}
+
+
+
+/* for Mobile css rules start here*/
+@media screen and (max-width: 768px) {
+    body{
+  & .article, & .categories, & .tags, & .archives{
+      margin: 0 20px 30px 20px;
+    
+  
+      & header {
+      grid-column: 1/-1;
+      grid-row: 1;
+      margin: 0;
+    }
+  
+    & .article-toc, & .categories-list, & .tags-list, & .archives-list {
+      grid-column: 1/-1;
+      grid-row: 2;
+  
+      & h2{
+        margin-bottom: 0;
+      }
+  
+      & .article-toc-lists{
+        margin: 0px;
+        padding: 0px;
+        padding-left: 20px;
+      }
+    }
+  
+    & .article-content {
+      grid-column: 1/-1;
+      grid-row: 3;
+      text-align: justify;
+      margin: 0;
+    }
+  
+    & .article-sidebar {
+      grid-column: 1/-1;
+      grid-row: 4;
+      margin-left: 0px;
+    }
+  }
+  
+  & footer {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid rgb(194, 193, 193);
+    
+  
+      & p {
+      margin: 0px;
+      padding: 4px;
+      text-align: center;
+    }
+  }
+  }
+  }
+  /* for Mobile css rules end here*/
